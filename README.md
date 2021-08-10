@@ -15,7 +15,7 @@ A JAR file is provided.
 - Source code and jar file is uploaded
 
 **8/10/21 - patch #1 added**
-- QuiclStartMainStart
+- QuickStartMainStart
   If the user exits the program and the Quick Click Folder happens to be deleted for whatever reason, a notification pops ups and warns the user that the     root folder is missing.
   
 - Patch#1 - DefaultFileMenu - Line fix
