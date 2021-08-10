@@ -21,5 +21,5 @@ A JAR file is provided.
 - DefaultFileMenu - Line fix
   I edited some parts in line 576 to 583 to make it more readable.
   
-- Jar file uodated
+- Jar file updated
 
