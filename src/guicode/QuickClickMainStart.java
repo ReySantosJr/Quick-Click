@@ -72,6 +72,7 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
     // Used for searching root file path
     private File startingFilePath;
     private String[] filePathsToSearch;
+    private File reCheckRootFilepath; 
 
     // Holds files paths of Main root folder locations
     private String rootFilePath = "";
@@ -109,7 +110,23 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
 	defaultBtn.addActionListener(this);
 	setUpDefaultBtn.addActionListener(this);
 	searchFileBtn.addActionListener(this);
-	infoBtn.addActionListener(this);		
+	infoBtn.addActionListener(this);	
+	
+	    checksforRootFolder();
+	    
+	// Enables search file window again
+	addWindowListener(new java.awt.event.WindowAdapter() {
+	    @Override
+	    public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+		if(reCheckRootFilepath.exists()) {
+		    System.exit(0);
+		}
+		else {
+		    JOptionPane.showMessageDialog(null, "Check your:\n       - OS drive\n       - Documents folder\n"
+		    	+ "       - Desktop\n       - or Recycling Bin.", "ATTENTION - ROOT FOLDER IS MISSING", JOptionPane.WARNING_MESSAGE);
+		}
+	    }
+	}); // Enables search file window again
     }
 
     /*
@@ -181,6 +198,7 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
 		// Root file path is stored
 		rootFilePath = startingFilePath.getAbsolutePath() + "\\" + filePathsToSearchOfCDrive;
 		rootFolderLocationTxtField.setText(rootFilePath);
+		reCheckRootFilepath = new File(rootFilePath);
 
 		rootFolderExists = true;
 		makeListsForProgram();
@@ -201,6 +219,7 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
 		// Root file path is stored
 		rootFilePath = userNameDesktop + "\\" + filePathsToSearchOfDesktop;
 		rootFolderLocationTxtField.setText(rootFilePath);
+		reCheckRootFilepath = new File(rootFilePath);
 
 		rootFolderExists = true;
 		makeListsForProgram();
@@ -217,6 +236,7 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
 		// Root file path is stored
 		rootFilePath = userNameDocuments.getAbsolutePath() + "\\" + filePathsToSearchOfDocuments;
 		rootFolderLocationTxtField.setText(rootFilePath);
+		reCheckRootFilepath = new File(rootFilePath);
 
 		rootFolderExists = true;
 		makeListsForProgram();
@@ -589,7 +609,7 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
 	    // Added to infoFrame
 	    infoFrame.add(vertBox);	    
 	}
-    }
+    } // END OF actionPerformed(ActionEvent e)
 
     /*
      * Main Method

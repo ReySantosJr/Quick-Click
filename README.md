@@ -9,3 +9,17 @@ user if they want to continue to the main menu or not, which they can select to 
 main menu or not. This provides easy access to files, programs, and websites.
 
 A JAR file is provided.
+
+
+**8/10/21 - uploaded to GitHub**
+- Source code and jar file is uploaded
+
+**8/10/21 - patch #1 added**
+- QuickStartMainStart
+  If the user exits the program and the Quick Click Folder happens to be deleted for whatever reason, a notification pops ups and warns the user that the     root folder is missing.
+  
+- DefaultFileMenu - Line fix
+  I edited some parts in line 576 to 583 to make it more readable.
+  
+- Jar file uodated
+

@@ -574,7 +574,9 @@ public class DefaultFileMenu extends JFrame {
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
 			    setEnabled(true);
 			}
-		    }); // Enables search file window again
+		    }); 
+			
+		    // Enables search file window again
 		    addFilePathJFrame.addWindowListener(new java.awt.event.WindowAdapter() {
 			@Override
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
