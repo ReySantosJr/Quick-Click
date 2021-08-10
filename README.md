@@ -11,7 +11,7 @@ main menu or not. This provides easy access to files, programs, and websites.
 A JAR file is provided.
 
 
-**8/10/21 - uploaded to GitHub**
+**8/5/21 - uploaded to GitHub**
 - Source code and jar file is uploaded
 
 **8/10/21 - patch #1 added**
