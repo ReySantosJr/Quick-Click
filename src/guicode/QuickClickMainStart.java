@@ -122,7 +122,8 @@ public class QuickClickMainStart extends JFrame implements ActionListener {
 		    System.exit(0);
 		}
 		else {
-		    JOptionPane.showMessageDialog(null, "Root Folder is missing.", "ATTENTION", JOptionPane.WARNING_MESSAGE);
+		    JOptionPane.showMessageDialog(null, "Check your:\n       - OS drive\n       - Documents folder\n"
+		    	+ "       - Desktop\n       - or Recycling Bin.", "ATTENTION - ROOT FOLDER IS MISSING", JOptionPane.WARNING_MESSAGE);
 		}
 	    }
 	}); // Enables search file window again
