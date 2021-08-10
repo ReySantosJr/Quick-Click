@@ -9,3 +9,6 @@ user if they want to continue to the main menu or not, which they can select to 
 main menu or not. This provides easy access to files, programs, and websites.
 
 A JAR file is provided.
+
+8/10/21 patch #1 added
+- QuiclStartMainStart
