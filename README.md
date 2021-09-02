@@ -24,5 +24,5 @@ A JAR file is provided.
   
 - Jar file updated
 
-**patch #2 PENDING**
+**9/2/21 - patch #2 added**
 - The look of the main menu was changed to appear better and more readable
